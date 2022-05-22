@@ -1,0 +1,14 @@
+ <!-- <h1>Search for a movie</h1>
+<input type="text" #currentInput />
+      <button (click)="getTitle(currentInput.value)"
+      (click)="currentInput.value=''">Search Movie</button> 
+ -->
+<div>
+  <select [(ngModel)]="albumSelected">
+    <option *ngFor="let album of albumRes" [value]="album.id">
+      {{album.title}}
+    </option>
+  </select>
+</div>
+
+<p>the selected album id is :: {{albumSelected}}</p>
