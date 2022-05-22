@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InputComponent } from './components/input/input.component';
-import { SearchService } from './services/search.service';
 import { FormsModule } from '@angular/forms'; 
 @NgModule({
   declarations: [
@@ -18,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [SearchService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
