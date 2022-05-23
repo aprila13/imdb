@@ -1,18 +1,13 @@
 .poster {
   border: 1px solid #ddd;
-  /* Gray border */
   border-radius: 4px;
-  /* Rounded border */
   padding: 5px;
-  /* Some padding */
   width: 200px;
-  /* Set a small width */
   height: 250px;
 }
 
 .poster:hover {
   cursor: pointer;
-  /* transform: scale(1.1); */
   box-shadow: 0 0 2px 1px rgba(50, 59, 62, 0.5);
 }
 

@@ -12,7 +12,7 @@ export class UsersService {
   //   return this.http.get(url);
   // }
 
-// ***test
+  // ***test
   getData() {
     let url = 'https://jsonplaceholder.typicode.com/photos';
     return this.http.get(url);

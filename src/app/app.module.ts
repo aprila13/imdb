@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InputComponent } from './components/input/input.component';
 import { FormsModule } from '@angular/forms';
-import { MenuComponent } from './menu/menu.component';
-import { HomeViewComponent } from './home-view/home-view.component';
-import { FooterComponent } from './footer/footer.component'; 
+import { MenuComponent } from './components/menu/menu.component';
+import { HomeViewComponent } from './components/home-view/home-view.component';
+import { FooterComponent } from './components/footer/footer.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,4 +28,3 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppModule { }
 
-//To fetch http has to be imported
