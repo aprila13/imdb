@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InputComponent } from './components/input/input.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
+import { HomeViewComponent } from './home-view/home-view.component'; 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    MenuComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,

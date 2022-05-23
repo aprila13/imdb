@@ -1,16 +1,1 @@
-<app-input></app-input>
-<h1>Most Popular Movies</h1>
-<table border="1">
-  <tr>
-    <td>ID</td>
-    <td>Title</td>
-    <td>Year</td>
-  </tr>
-
-  <!-- top 10 results, most popular -->
-  <tr *ngFor="let item of data; let i = index">
-    <td *ngIf="i<10">{{item.id}}</td>
-    <td *ngIf="i<10">{{item.title}}</td>
-    <td *ngIf="i<10">{{item.year}}</td>
-  </tr>
-</table>
+<app-menu></app-menu>
