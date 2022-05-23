@@ -6,8 +6,15 @@ import { HttpClient } from '@angular/common/http';
 export class UsersService {
   constructor(private http: HttpClient) {}
 
+  //for prod
+  // getData() {
+  //   let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_aaaaaaaa';
+  //   return this.http.get(url);
+  // }
+
+// ***test
   getData() {
-    let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_1n6lx9k1';
+    let url = 'https://jsonplaceholder.typicode.com/photos';
     return this.http.get(url);
   }
 }

@@ -1,23 +1,29 @@
-<!-- Click search btn, go to input component -->
-<!-- Search btn needs to be in nav -->
-<!-- <app-input></app-input> -->
-<h1>Most Popular Movies</h1>
-<!-- <table border="1">
-  <tr>
-    <td>ID</td>
-    <td>Title</td>
-    <td>Year</td>
-  </tr> -->
+<!-- prod -->
+<!-- <div class="container">
+  <h1 class="mt-5 mb-3">Most Popular Movies</h1>
+  <div class="row">
+  <div *ngFor="let item of data; let i = index" class="col-md-4 col-sm-6 col-12 hover-effect">
+  <img src="{{ item.image }}" alt="poster-image" class="poster mx-auto d-block" *ngIf="i < 12" />
+  <h5 *ngIf="i < 12">{{ item.title }}</h5>
+  <small *ngIf="i < 12">{{ item.year }}</small>
+</div>  
+  </div>
+</div> -->
+ 
 
-  <!-- top 10 results, most popular -->
-  <!-- <tr *ngFor="let item of data; let i = index">
-    <td *ngIf="i < 10">{{ item.id }}</td>
-    <td *ngIf="i < 10">{{ item.title }}</td>
-    <td *ngIf="i < 10">{{ item.year }}</td>
-  </tr>
-</table> -->
-<div *ngFor="let item of data; let i = index">
-  <img src="{{ item.image }}" alt="poster image" class="poster" *ngIf="i < 10"/>
-  <h5 *ngIf="i < 10">{{ item.title }}</h5>
-  <small *ngIf="i < 10">{{ item.year }}</small>
+<!-- test -->
+<div class="container mb-5">
+<h1 class="mt-5 mb-3">Most Popular Movies</h1>
+  <div class="row">
+   <div *ngFor="let item of data; let i = index" class="col-md-4 col-sm-6 col-12 hover-effect">
+  <img src="{{ item.thumbnailUrl }}" alt="poster-image" class="poster mx-auto d-block" *ngIf="i < 12" />
+  <h5 *ngIf="i < 12">{{ item.title }}</h5>
+  <small *ngIf="i < 12">{{ 2022 }}</small>
+</div> 
 </div>
+</div>
+
+
+
+
+

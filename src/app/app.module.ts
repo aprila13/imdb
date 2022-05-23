@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { InputComponent } from './components/input/input.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
-import { HomeViewComponent } from './home-view/home-view.component'; 
+import { HomeViewComponent } from './home-view/home-view.component';
+import { FooterComponent } from './footer/footer.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     MenuComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

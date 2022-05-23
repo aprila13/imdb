@@ -11,8 +11,9 @@ export class HomeViewComponent implements OnInit {
   data: any = [];
   constructor(private user: UsersService) {
     this.user.getData().subscribe((data) => {
-      this.data = data['items'];
+      // this.data = data['items']; //prod
       //this.propAbove = apiData;
+      this.data = data; //test
       console.log(data);
     });
   }
