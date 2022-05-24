@@ -9,43 +9,45 @@ import { UsersService } from 'src/app/services/users.service';
 export class InputComponent {
 
   //Prod
-  constructor(private http: HttpClient) {}
-  showMovies:boolean = false;
-  movieName:string = '';
-  movieResult = [];
-
-  searchMovie() {
-    this.http
-      .get(
-        'https://imdb-api.com/en/API/SearchMovie/k_1n6lx9k1/' + this.movieName
-      )
-      .subscribe((res: any) => {
-        this.movieResult = res['results'];
-        this.showMovies = true;
-        console.log('The movie is: ', this.movieResult);
-      });
-  }
-
-  //Test
-  //  data: any = [];
-  // constructor(private user: UsersService, private http: HttpClient) {
-  //   this.user.getData().subscribe((data) => {
-  //     // this.data = data['items']; //prod
-  //     //this.propAbove = apiData;
-  //     this.data = data; //test
-  //     console.log(data);
-  //   });
-  // }
-
-  // movieName = '';
+  // constructor(private http: HttpClient) {}
+  // showMovies:boolean = false;
+  // movieName:string = '';
+  // movieResult = [];
 
   // searchMovie() {
   //   this.http
   //     .get(
-  //       'https://jsonplaceholder.typicode.com/photos')
+  //       'https://imdb-api.com/en/API/SearchMovie/k_1n6lx9k1/' + this.movieName
+  //     )
   //     .subscribe((res: any) => {
-  //       // const movieResult = res;
-  //       console.log('The movie is: ', res);
+  //       this.movieResult = res['results'];
+  //       this.showMovies = true;
+  //       console.log('The movie is: ', this.movieResult);
   //     });
   // }
+
+  //Test
+   data: any = [];
+   showMovies:boolean = false;
+  constructor(private user: UsersService, private http: HttpClient) {
+    this.user.getData().subscribe((data) => {
+      // this.data = data['items']; //prod
+      //this.propAbove = apiData;
+      this.data = data; //test
+      console.log(data);
+    });
+  }
+
+  movieName = '';
+
+  searchMovie() {
+    this.http
+      .get(
+        'https://jsonplaceholder.typicode.com/photos')
+      .subscribe((res: any) => {
+        // const movieResult = res;
+        console.log('The movie is: ', res);
+        this.showMovies = true;
+      });
+  }
 }
