@@ -7,15 +7,15 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   //for prod
-  // getData() {
-  //   let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_aaaaaaaa';
-  //   return this.http.get(url);
-  // }
-
-  // ***test
   getData() {
-    let url = 'https://jsonplaceholder.typicode.com/photos';
+    let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_1n6lx9k1';
     return this.http.get(url);
   }
+
+  // ***test
+  // getData() {
+  //   let url = 'https://jsonplaceholder.typicode.com/photos';
+  //   return this.http.get(url);
+  // }
 }
 //A service is used to share data to multiple components

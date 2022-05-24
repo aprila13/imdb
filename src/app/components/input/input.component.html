@@ -1,5 +1,5 @@
 <!-- Prod -->
-<!-- <div class="container mb-5">
+ <div class="container mb-5">
   <div class="row mt-5 mb-5">
     <div class="col-12">
       <input type="text" [(ngModel)]="movieName" #currentInput />
@@ -8,12 +8,12 @@
       </button>
     </div>
   </div>
-  <div> -->
-    <!-- *ngIf="showMovie" -->
-    <!-- <h1 class="mt-5">Search Results for "Enter input value"</h1>
+  <div *ngIf="showMovies == true"> 
+    <!-- *ngIf="showMovies == true" -->
+     <h1 class="mt-5">Search Results for "{{movieName}}"</h1>
     <div class="row">
       <div
-        *ngFor="let item of data; let i = index"
+        *ngFor="let item of movieResult; let i = index"
         class="col-md-4 col-sm-6 col-12 hover-effect"
       >
         <img
@@ -23,23 +23,23 @@
           *ngIf="i < 12"
         />
         <h5 *ngIf="i < 12">{{ item.title }}</h5>
-        <small *ngIf="i < 12">{{ item.year }}</small>
+        <small *ngIf="i < 12">{{ item.description }}</small>
       </div>
     </div>
   </div>
-</div> -->
+</div> 
 
 <!-- Test -->
-<div class="container mb-5">
+<!-- <div class="container mb-5">
   <div class="row mt-5 mb-5">
     <div class="col-12">
       <input type="text" placeholder="Space filler" />
       <button (click)="searchMovie()">Click</button>
     </div>
   </div>
-  <div>
+  <div> -->
     <!-- *ngIf="showMovie" -->
-    <h1 class="mt-5">Search Results for "Enter input value"</h1>
+    <!-- <h1 class="mt-5">Search Results for "Enter input value"</h1>
     <div class="row">
       <div
         *ngFor="let item of data; let i = index"
@@ -55,5 +55,5 @@
         <small *ngIf="i < 12">{{ 2022 }}</small>
       </div>
     </div>
-  </div>
-</div>
+  </div> 
+</div>-->
