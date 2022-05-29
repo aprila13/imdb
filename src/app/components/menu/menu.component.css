@@ -1,23 +1,18 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Smooch&display=swap');
+
+nav.nav-color {
+  background-color: rgb(3, 113, 113);
 }
 
-li {
-  float: left;
+.nav-link {
+  color: #fff;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+.navbar-brand {
+  font-size: 30px;
+  font-family: 'Smooch', sans-serif;
+} 
 
-li a:hover {
-  background-color: #111;
+.menu-border {
+  border: solid 1px white;
 }
