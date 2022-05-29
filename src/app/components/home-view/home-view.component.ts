@@ -7,21 +7,10 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./home-view.component.css']
 })
 export class HomeViewComponent implements OnInit {
-//Prod
-  // data: any = [];
-  // constructor(private user: UsersService) {
-  //   this.user.getData().subscribe((data) => {
-  //     this.data = data['items']; //test
-  //     console.log(data);
-  //   });
-  // }
-
-  //test
   data: any = [];
   constructor(private user: UsersService) {
     this.user.getData().subscribe((data) => {
-      //this.propAbove = apiData;
-      this.data = data; 
+      this.data = data['items']; 
       console.log(data);
     });
   }

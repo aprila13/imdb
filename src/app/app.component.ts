@@ -10,7 +10,6 @@ export class AppComponent {
   constructor(private user: UsersService) {
     this.user.getData().subscribe((data) => {
       this.data = data['items'];
-      //this.propAbove = apiData;
       console.log(data);
     });
   }

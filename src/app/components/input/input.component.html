@@ -1,78 +1,43 @@
-<!-- Prod -->
-<!-- <div class="container mb-5">
-  <div class="row mt-5 mb-5">
-    <div class="col-12">
-      <input type="text" [(ngModel)]="movieName" #currentInput />
-      <button (click)="searchMovie()" (click)="currentInput.value = ''">
-        Search
-      </button>
-    </div>
-  </div>
-  <div *ngIf="showMovies == true"> 
-     <h1 class="mt-5">Search Results for "{{movieName}}"</h1>
-    <div class="row">
-      <div
-        *ngFor="let item of movieResult; let i = index"
-        class="col-md-4 col-sm-6 col-12 hover-effect"
-      >
-        <img
-          src="{{ item.image }}"
-          alt="poster-image"
-          class="poster mx-auto d-block"
-          *ngIf="i < 12"
-        />
-        <h5 *ngIf="i < 12">{{ item.title }}</h5>
-        <small *ngIf="i < 12">{{ item.description }}</small>
-      </div>
-    </div>
-  </div>
-</div>  -->
-
-<!-- Test -->
 <div class="container mb-5">
-  <div class="row mt-5 mb-5">
+  <div class="row mt-5 m">
     <div class="col-2"></div>
     <div class="col-8">
-      <div class="input-group input-group-lg">
-        <input
-          type="text"
-          class="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-lg"
-        />
-        <button (click)="searchMovie()" class="btn btn-primary search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
+      <div class="input-group input-group-">
+        <input 
+          type="text" 
+          [(ngModel)]="movieName"
+          #currentInput
+          class="form-control" 
+          placeholder="Enter movie title..."
+          />
+          <button 
+          (click)="searchMovie()"
+          (click)="currentInput.value=''"
+          class="btn btn-primary search-icon">
+        <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
     </div>
     <div class="col-2"></div>
   </div>
-
-  <!-- end input -->
   <div>
     <div *ngIf="showMovies == true">
-      <h1 class="mt-5 text-muted">Search Results for "Enter input value"</h1>
-
-      <div *ngFor="let item of data; let i = index">
+      <h1 class="mt-5 text-muted">Search Results for "{{movieVal.charAt(0).toUpperCase() + movieVal.slice(1)}}"</h1>
+      <div *ngFor="let item of movieResult; let i = index">
         <div class="row border border-info mb-2">
           <div class="col-8 py-2 text-center">
-            <img
-              class="img-size"
-              src="{{ item.thumbnailUrl }}"
-              *ngIf="i < 12"
+            <img 
+            class="img-size"
+            src="{{ item.image }}"
             />
           </div>
-
           <div class="col-4">
             <h3 class="fw-bold mb-3" *ngIf="i < 12">
-              {{ item.title.charAt(0).toUpperCase() + item.title.slice(1) }}
+              {{ item.title.charAt(0).toUpperCase() + item.title.slice(1)}}
             </h3>
-            <h5>
-              Description: Lorem ipsum dolor amet elit. Necessitatibus,
-              architecto! Similique magni eum.
-            </h5>
+            <h5>Description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, perspiciatis!</h5>
             <h5>Actors: John Doe, John Wayne, Jane Doe, G.I. Jane</h5>
-            <p *ngIf="i < 12" class="fst-italic">{{ 2022 }}</p>
+            <p *ngIf="i < 12" class="fst-italic">{{ item.year }}</p>
           </div>
         </div>
       </div>
