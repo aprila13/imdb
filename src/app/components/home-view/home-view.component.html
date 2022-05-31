@@ -1,21 +1,25 @@
-<div class="container mb-5">
-  <h1 class="mt-5 mb-3">Most Popular Movies</h1>
-  <div>
-    <div *ngFor="let item of data; let i = index">
-      <div>
-        <div class="row border border-info mb-2">
-          <div class="col-8 py-2 text-center">
-            <img src="{{ item.image }}" class="img-fluid" />
-          </div>
-          <div class="col-4">
-            <h3 class="fw-bold mb-3" *ngIf="i < 12">
+ <main>
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <h1 class="mt-5 mb-3">Most Popular Movies</h1>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 ">
+          <div class="col card-margin" *ngFor="let item of data; let i = index">
+            <div class="card shadow-sm card-size">
+            <img src="{{ item.image }}" class="img-fluid" *ngIf="i < 12" /> 
+              
+              <div class="card-body">
+              <h3 class="fw-bold mb-3 card-title" *ngIf="i < 12">
               {{ item.title.charAt(0).toUpperCase() + item.title.slice(1) }}
             </h3>
-            <h6 *ngIf="i < 12">Cast & Crew: {{ item.crew }}</h6>
-            <p *ngIf="i < 12" class="fst-italic">{{ item.year }}</p>
+            <h6 class="card-text" *ngIf="i < 12">Cast & Crew: {{ item.crew }}</h6>
+                <div class="d-flex justify-content-between align-items-center">
+                <p *ngIf="i < 12" class="fst-italic">{{ item.year }}</p>
+                  <small class="text-muted" *ngIf="i < 12">imDbRating: {{ item.imDbRating }}</small> 
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </main>

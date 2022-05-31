@@ -7,7 +7,7 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   getData() {
-    let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_1yj2rdhq';
+    let url = 'https://imdb-api.com/en/API/MostPopularMovies/k_1n6lx9k1';
     return this.http.get(url);
   }
 
